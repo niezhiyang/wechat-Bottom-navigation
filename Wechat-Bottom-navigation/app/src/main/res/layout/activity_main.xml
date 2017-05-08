@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kitrobot.com.wechat_bottom_navigation.MainActivity"
+    android:orientation="vertical">
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_weight="1"
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></android.support.v4.view.ViewPager>
+<LinearLayout
+    android:paddingTop="10dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:id="@+id/rg"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <LinearLayout
+        android:id="@+id/ll_home"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <kitrobot.com.wechat_bottom_navigation.view.MyImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:gravity="center"
+            android:text="微信"
+            android:button="@null"
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_categroy"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <kitrobot.com.wechat_bottom_navigation.view.MyImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:gravity="center"
+            android:text="通信录"
+            android:button="@null"
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_find"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <kitrobot.com.wechat_bottom_navigation.view.MyImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:gravity="center"
+            android:text="发现"
+            android:button="@null"
+            android:id="@+id/rb3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_mine"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <kitrobot.com.wechat_bottom_navigation.view.MyImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv4"
+            android:layout_width="@dimen/tab_image_weith"
+            android:layout_height="@dimen/tab_image_heigh"/>
+        <TextView
+            android:gravity="center"
+            android:text="我"
+            android:button="@null"
+            android:id="@+id/rb4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>
