@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private int mTextNormalColor;// 未选中的字体颜色
     private int mTextSelectedColor;// 选中的字体颜色
+    private LinearLayout mLinearLayoutHome;
+    private LinearLayout mLinearLayoutCategory;
+    private LinearLayout mLinearLayoutFind;
+    private LinearLayout mLinearLayoutMine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +68,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void setListener() {
+        //下面的tab设置点击监听
+        mLinearLayoutHome.setOnClickListener(this);
+        mLinearLayoutCategory.setOnClickListener(this);
+        mLinearLayoutFind.setOnClickListener(this);
+        mLinearLayoutMine.setOnClickListener(this);
+
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPs) {
@@ -125,6 +136,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
+        mLinearLayoutHome = (LinearLayout) findViewById(R.id.ll_home);
+        mLinearLayoutCategory = (LinearLayout) findViewById(R.id.ll_categroy);
+        mLinearLayoutFind = (LinearLayout) findViewById(R.id.ll_find);
+        mLinearLayoutMine = (LinearLayout) findViewById(R.id.ll_mine);
         mViewPager = (ViewPager) findViewById(R.id.vp);
         mIvHome = (MyImageView) findViewById(R.id.iv1);  // tab 微信 imageview
         mTvHome = (TextView) findViewById(R.id.rb1);  //  tab  微信 字
